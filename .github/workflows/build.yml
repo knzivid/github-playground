@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: validate branch name
         run: |
-          python3 -c "import sys; sys.exit(1 if 'fail' in '$BRANCH' else 0)"
+          python3 -c "import sys; print('$BRANCH'); sys.exit(1 if 'fail' in '$BRANCH' else 0)"
