@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: validate branch name
         run: |
+          BRANCH=${GITHUB_REF##*/}
           python3 -c "import sys; print('$BRANCH'); sys.exit(1 if 'fail' in '$BRANCH' else 0)"
