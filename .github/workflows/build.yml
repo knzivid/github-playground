@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: validate branch name
         run: |
-          echo "${{ BRANCH }}" | grep -v fail
+          echo "$BRANCH" | grep -v fail
