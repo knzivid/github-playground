@@ -1,0 +1,14 @@
+on: [push]
+
+env:
+    BRANCH: ${GITHUB_REF##*/}
+    VOLATILE_BRANCH: ${{ ! (github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/heads/release-')) }}
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: validate branch name
+        run: |
+          echo "${{ BRANCH }}" | grep -v fail
