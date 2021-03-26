@@ -1,5 +1,5 @@
 version = 1
 merge.automerge_label = "kodiak-automerge"
-merge.method = "merge"
+merge.method = "rebase"
 merge.priority_merge_label = "kodiak-urgent-automerge"
 update.autoupdate_label = "kodiak-autoupdate"
